@@ -24,6 +24,9 @@ const NavBar = () => {
       <li>
         <Link to="/order/OTC-Medicines">Order</Link>
       </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
       {user ? (
         <>
           <li>
