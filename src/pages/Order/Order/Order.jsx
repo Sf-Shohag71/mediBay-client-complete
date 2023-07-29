@@ -24,9 +24,9 @@ const Order = () => {
     return (
         <div>
             <Helmet>
-                <title>Bistro Boss | Order</title>
+                <title>MediBay | Order</title>
             </Helmet>
-            <Cover img={orderCoverImg} title="Order Medicine"></Cover>
+            <Cover img={orderCoverImg} title="Order Medicine" subTitle="Our medical e-commerce website offers a wide range of products to cater to healthcare needs."></Cover>
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
                     <Tab>Vitamins & Supplements</Tab>

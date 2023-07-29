@@ -43,7 +43,7 @@ const ManageItems = () => {
               <th>Item</th>
               <th>Category</th>
               <th>Price</th>
-              <th>Update</th>
+             
               <th>Delete</th>
             </tr>
           </thead>
@@ -68,9 +68,7 @@ const ManageItems = () => {
                 </td>
                 <td>{item.category}</td>
                 <td className="text-right">&#2547; {item.price}</td>
-                <td>
-                  <button className="btn btn-ghost btn-xs">Update</button>
-                </td>
+                
                 <td>
                   <button
                     onClick={() => handleDelete(item)}

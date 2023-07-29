@@ -32,14 +32,33 @@ const AllUsers = () => {
         })
     }
 
-    const handleDelete = user => {
-
+    const handleDelete = (item) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              axiosSecure.delete(`/user/${item._id}`).then((res) => {
+                console.log("deleted res:", res.data);
+      
+                if (res.data.deletedCount > 0) {
+                  refetch();
+                  Swal.fire("Deleted!", "Your file has been deleted.", "success");
+                }
+              });
+            }
+          });
     }
 
     return (
         <div className="w-full">
             <Helmet>
-                <title>Bistro Boss | All users</title>
+                <title>MediBay | All users</title>
             </Helmet>
             <h3 className="text-3xl font-semibold my-4">Total Users: {users.length}</h3>
             <div className="overflow-x-auto">
@@ -60,7 +79,7 @@ const AllUsers = () => {
                                 <th>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>{ user.role === 'admin' ? 'admin' :
+                                <td>{ user.role === 'admin' ? 'seller' :
                                     <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600  text-white"><FaUserShield></FaUserShield></button> 
                                     }</td>
                                 <td><button onClick={() => handleDelete(user)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button></td>

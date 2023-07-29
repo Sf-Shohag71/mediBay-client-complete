@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 const Footer = () => {
     return (
@@ -8,27 +9,27 @@ const Footer = () => {
           <h2>Contact</h2>
           
           <address>
-            5534 Somewhere In. The World 22193-10212<br/>
+            East kazipara, kafrul, Dhaka<br/>
                 
-            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+            <a class="footer__btn" href="mailto:sanjoyroynisan@gmail.com">Email Us</a>
           </address>
         </div>
         
         <ul class="footer__nav">
           <li class="nav__item">
-            <h2 class="nav__title">Media</h2>
+            <h2 class="nav__title">Useful Links</h2>
       
             <ul class="nav__ul">
               <li>
-                <a href="#">Online</a>
+                <a href="/">Home</a>
               </li>
       
               <li>
-                <a href="#">Print</a>
+                <a href="/menu">Our shop</a>
               </li>
                   
               <li>
-                <a href="#">Alternative Ads</a>
+                <a href="/order/OTC-Medicines">Order</a>
               </li>
             </ul>
           </li>
@@ -37,53 +38,38 @@ const Footer = () => {
             <h2 class="nav__title">Categories</h2>
             
             <ul class="nav__ul nav__ul--extra">
+              
+              
               <li>
-                <a href="#">OTC-Medicine</a>
+                <Link to="/order/OTC-Medicines">OTC-Medicines</Link>
               </li>
               
               <li>
-                <a href="#">Personal Care</a>
+              <Link to="/order/Personal Care">Personal Care</Link>
               </li>
               
               <li>
-                <a href="#">Vitamin and Supliments</a>
+              <Link to="/order/Vitamins & Supplements">Vitamins & Supplements</Link>
               </li>
               
               <li>
-                <a href="#">Dental Care</a>
+              <Link to="/order/Medical Device">Medical Device</Link>
               </li>
               
               <li>
-                <a href="#">Medical Devices</a>
+              <Link to="/order/Dental Care">Dental Care</Link>
               </li>
               
             </ul>
           </li>
           
-          <li class="nav__item">
-            <h2 class="nav__title">Legal</h2>
-            
-            <ul class="nav__ul">
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              
-              <li>
-                <a href="#">Terms of Use</a>
-              </li>
-              
-              <li>
-                <a href="#">Sitemap</a>
-              </li>
-            </ul>
-          </li>
         </ul>
         <br/>
         <div class="legal">
           <p>&copy; 2023 MediBay. All rights reserved.</p>
           
           <div class="legal__links">
-            <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+            <span>Made by MediBay</span>
           </div>
         </div>
       </footer>

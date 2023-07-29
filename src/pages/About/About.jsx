@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./About.css";
 const About = () => {
   return (
@@ -81,7 +82,7 @@ const About = () => {
               </div>
             </div>
             <a>
-              <button className="explore">Explore our Services</button>
+              <Link to="/"><button className="explore">Explore our Services</button></Link>
             </a>
           </div>
           <img
@@ -98,10 +99,10 @@ const About = () => {
             <div className="container">
               <h2>Md. Omor Faruk</h2>
               <p className="title">CEO & Founder</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>jane@example.com</p>
+              <p>I am the CEO and founder of MedEasy medical e-commerce website. </p>
+              <p>omor4498@gmail.com</p>
               <p>
-                <button className="button">Contact</button>
+                <a className="button" href="mailto:omor4498@gmail.com">Contact</a>
               </p>
             </div>
           </div>
@@ -112,11 +113,11 @@ const About = () => {
             <img src="https://i.ibb.co/Np9cPQp/Sanjoy.jpg" className="team-img" alt="Mike" />
             <div className="container">
               <h2>Sanjoy Chandra Roy</h2>
-              <p className="title">Founder and Art Director</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>mike@example.com</p>
+              <p className="title">Founder and technical Director</p>
+              <p>I am the founder and technical Director of MedEasy medical e-commerce website.</p>
+              <p>sanjoyroynisan@gmail.com</p>
               <p>
-                <button className="button">Contact</button>
+                <a className="button" href="mailto:sanjoyroynisan@gmail.com">Contact</a>
               </p>
             </div>
           </div>
@@ -128,10 +129,10 @@ const About = () => {
             <div className="container">
               <h2>Rakibul Islam</h2>
               <p className="title">Founder and Designer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>john@example.com</p>
+              <p>I am the founder and Designer of MedEasy medical e-commerce website.</p>
+              <p>rakibalbin17@gmail.com</p>
               <p>
-                <button className="button">Contact</button>
+                <a className="button" href="mailto:rakibalbin17@gmail.com">Contact</a>
               </p>
             </div>
           </div>

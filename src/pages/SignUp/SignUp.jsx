@@ -55,13 +55,13 @@ const SignUp = () => {
     return (
         <>
             <Helmet>
-                <title>Bistro Boss | Sign Up</title>
+                <title>MediBay | Sign Up</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Sign up now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <p className="py-6">For the very first time user you need to create an account first to get better services.</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -76,7 +76,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text"  {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
+                                <input type="text"  {...register("photoURL")} placeholder="Photo URL" className="input input-bordered" />
                                 {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
                             </div>
                             <div className="form-control">
